@@ -12,13 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Entity
 @Document(collection="users")
 public class User {
-	public User(int id, String uname, String password) {
-		super();
-		this.id = id;
-		this.uname = uname;
-		this.password = password;
-	}
-
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	int id;

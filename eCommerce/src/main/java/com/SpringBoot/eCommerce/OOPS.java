@@ -1,4 +1,4 @@
-/*package com.SpringBoot.eCommerce;
+package com.SpringBoot.eCommerce;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,7 +9,6 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
 
-import org.assertj.core.util.Arrays;
 
 public class OOPS {
 	
@@ -20,7 +19,15 @@ public class OOPS {
 		String str1=str+"Tendulkar";
 		
 			System.out.println(str1);
-		
+			 Integer a=100;
+		        User u=new User();
+		        u.setId(400);
+		        u.setUname("chandru");
+		        
+		        System.out.println("The value of a is"+ u.getUname());
+		        add(u);
+		        System.out.println("The modified value of a is"+ u.getUname());
+        
 		List<Integer> genericList =new ArrayList<>();
 		genericList.add(5);
 		genericList.add(12);
@@ -50,29 +57,22 @@ public class OOPS {
 		user1.setId(4);
 		user1.setUname("Ragul");
 		user1.setPassword("Dhan2045#");
-		user1.setSalary(70000);
 		hashSet.add(user1);
 		useList.add(user1);
 		User user2=new User();
 		user2.setId(5);
 		user2.setUname("Hareesh");
 		user2.setPassword("Dhan2045#");
-		user2.setSalary(80000);
 		hashSet.add(user2);
 		useList.add(user2);
 		User user3=new User();
 		user3.setId(1);
 		user3.setUname("Lal");
 		user3.setPassword("Dhan2045#");
-		user3.setSalary(40000);
 		hashSet.add(user3);
 		useList.add(user3);
 		hashSet.forEach(i-> System.out.println(i.uname));
 		List<User> iList=useList.stream().sorted().collect(Collectors.toList());
-		User max=useList.stream().max(User::compareTo).get();
-		User min=useList.stream().min(User::compareTo).get();
-		System.out.println(max.getSalary());
-		System.out.println(min.getSalary());
 		Optional<User> maxString=useList.stream().reduce((user5,user4)-> user5.getUname().length()>user4.getUname().length() ? user5: user4);
 		System.out.println("Break2");
 		iList.forEach(i-> System.out.println(i.uname));
@@ -93,37 +93,20 @@ public class OOPS {
 		s1.setName("Ram");
 		System.out.println(s1.getName());
 		System.out.println(s.getName());
-        OOPS.emp e=new OOPS.emp();
-        e.setUname("Ram1");
-        System.out.println(e.getUname());
-        
-	}
-	int add(int a,int b)
+       	}
+	public static void add(User a)
 	{
-		return a+b;
+		a.setUname("ChandraSekhar");
+		User b=new User();
+		b.setUname("Test");
+		b=a;
+		System.out.println("The value before getting modified"+b.getUname());
+		b.setUname("Maharaj");
 	}
 	Double add(int a,int b,int c)
 	{
 		return Double.parseDouble(String.valueOf(a+b)) ;
 	}
-	    static class emp
-	    {
-	    	int userid;
-	    	String uname;
-			public int getUserid() {
-				return userid;
-			}
-			public void setUserid(int userid) {
-				this.userid = userid;
-			}
-			public String getUname() {
-				return uname;
-			}
-			public void setUname(String uname) {
-				this.uname = uname;
-			}
-	    	
-	    }
+	    	    
 	
 }
-*/

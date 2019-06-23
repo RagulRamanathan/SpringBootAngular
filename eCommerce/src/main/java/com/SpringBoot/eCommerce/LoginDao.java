@@ -10,5 +10,6 @@ public interface LoginDao extends MongoRepository<User,Integer>{
 
 	Optional<User> findByuname(String uname);
 	
+	
 
 }
